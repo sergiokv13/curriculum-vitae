@@ -3,6 +3,7 @@
 <head>
   <title>Curriculum Vitae</title>
   <link rel="stylesheet" type="text/css" href="curriculum.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   Optional theme -->
@@ -37,32 +38,68 @@
     <a href="https://twitter.com/Dual_Designers"><img src="imagenes/facebook.png" height="70px" width="70px"></a>
   </div>
   <div id="primer_contenedor">
-  <h1>Curriculum Vitae</h1>
-  <h2>Academico</h2>
-   <ul>
-      <li>Capacitacion de Reparaciones Electricas Basicas - Infocal - 2010</li>
-      <li>Certificado 2do Lugar en la categoria avanzada del concurso visual con Scratch - Universidad del Valle - 2011</li>
-      <li>Segundo Lugar olimpiada departamental de informatica -Facultad de ciencias y tecnologias-2011</li>
-      <li>1era Olimpiada Cientifica Estudiantil Diploma de Honor de informatica-Ministerio de educacion - 2011 </li>
-      <li>Diploama de Honor olimpiada cientifica estudiantil plurinacional boliviana - ministerio de educacion - 2011</li>
-      <li>Certificado de logro Concurso latinoamericano - ACM ICPC - South - 2011</li>
-      <li>Bachiller en Humanidades -  Colegio San Agustin  - 2011</li>
-      <li>Certificado de participacion en la olimpiada internacional de informatica - IOI - 2012</li>
-      <li>Certificado de participacion a la competencia iberoamericana de informatica - Competencia iberoamericana de informatica-2012</li>
-      <li>Certificada de presencia en el campamento internacional - ICPC - 2012</li>
-      <li>Certificado de participacion Introduccion a drupal - drupal camp - 2013</li>
-      <li>Certificado de desarrollo de modulos - drupal camp - 2013</li>
-      <li>Certificado de participacion Introduccion a drupal II- drupal camp - 2013</li>
-      <li>Diploma de honor - Colegio San Agustin - 2013</li>
-      <li>Certificado de tercer lugar latinoamerica - ACM ICPC - SOUTH</li>
-      <li>Certificado por trabajo voluntario para desarrollo pagina web - SECREAD - Universidad catolica San Pablo - 2014</li>
-    </ul>
-  <h2>Laboral</h2>
-   <ul>
-      <li>Gerente General - Dual Designers - 2015-></li>
-    </ul>
+    <h1>Curriculum Vitae</h1>
+    <ul id="lista">
+        <li>Gerente General - Dual Designers - 2015 +</li>    
+        <li>Certificado por trabajo voluntario para desarrollo pagina web - SECREAD - Universidad catolica San Pablo - 2014</li>
+        <li>Certificado de tercer lugar latinoamerica - ACM ICPC - SOUTH</li>
+        <li>Diploma de honor - Colegio San Agustin - 2013</li>
+        <li>Certificado de participacion Introduccion a drupal II- drupal camp - 2013</li>
+        <li>Certificado de desarrollo de modulos - drupal camp - 2013</li>
+        <li>Certificado de participacion Introduccion a drupal - drupal camp - 2013</li>
+        <li>Certificada de presencia en el campamento internacional - ICPC - 2012</li>
+        <li>Certificado de participacion a la competencia iberoamericana de informatica - Competencia iberoamericana de informatica-2012</li>
+        <li>Certificado de participacion en la olimpiada internacional de informatica - IOI - 2012</li>
+        <li>Bachiller en Humanidades -  Colegio San Agustin  - 2011</li>
+        <li>Certificado de logro Concurso latinoamericano - ACM ICPC - South - 2011</li>
+        <li>Diploama de Honor olimpiada cientifica estudiantil plurinacional boliviana - ministerio de educacion - 2011</li>
+        <li>1era Olimpiada Cientifica Estudiantil Diploma de Honor de informatica-Ministerio de educacion - 2011 </li>
+        <li>Segundo Lugar olimpiada departamental de informatica -Facultad de ciencias y tecnologias-2011</li>
+        <li>Certificado 2do Lugar en la categoria avanzada del concurso visual con Scratch - Universidad del Valle - 2011</li>
+        <li>Capacitacion de Reparaciones Electricas Basicas - Infocal - 2010</li>
+      </ul>
   </div>
-  <a href="http://www.dual-designers.com"> <img id="dual" src="imagenes/dual.png" height="400px" width="400px"></a>
+  <div id="navegacion">
+    <button id="2010" class="btn" >2010</button>
+    <button id="2011" class="btn" >2011</button>
+    <button id="2012" class="btn" >2012</button>
+    <button id="2013" class="btn" >2013</button>
+    <button id="2014" class="btn" >2014</button>
+    <button id="2015" class="btn" >2015</button>
+    <button id="todo" class="btn" >Todo</button>
+  </div>
 
 </body>
 </html>
+
+<script type="text/javascript">
+  var curriculum = new Object(); 
+  curriculum['2010'] = "<li>Capacitacion de Reparaciones Electricas Basicas - Infocal - 2010</li>";
+  curriculum['2011'] = "<li>Bachiller en Humanidades -  Colegio San Agustin  - 2011</li>"+
+        "<li>Bachiller en Humanidades -  Colegio San Agustin  - 2011</li>"+
+        "<li>Certificado de logro Concurso latinoamericano - ACM ICPC - South - 2011</li>"+
+        "<li>Diploama de Honor olimpiada cientifica estudiantil plurinacional boliviana - ministerio de educacion - 2011</li>"+
+        "<li>1era Olimpiada Cientifica Estudiantil Diploma de Honor de informatica-Ministerio de educacion - 2011 </li>"+
+        "<li>Segundo Lugar olimpiada departamental de informatica -Facultad de ciencias y tecnologias-2011</li>"+
+        "<li>Certificado 2do Lugar en la categoria avanzada del concurso visual con Scratch - Universidad del Valle - 2011</li>";
+  curriculum['2012'] = "<li>Certificada de presencia en el campamento internacional - ICPC - 2012</li>"+
+        "<li>Certificado de participacion a la competencia iberoamericana de informatica - Competencia iberoamericana de informatica-2012</li>"+
+        "<li>Certificado de participacion en la olimpiada internacional de informatica - IOI - 2012</li>";
+  curriculum['2013'] = "<li>Diploma de honor - Colegio San Agustin - 2013</li>"+
+        "<li>Certificado de participacion Introduccion a drupal II- drupal camp - 2013</li>"+
+        "<li>Certificado de desarrollo de modulos - drupal camp - 2013</li>"+
+        "<li>Certificado de participacion Introduccion a drupal - drupal camp - 2013</li>";
+  curriculum['2014'] = "<li>Certificado por trabajo voluntario para desarrollo pagina web - SECREAD - Universidad catolica San Pablo - 2014</li>"+
+        "<li>Certificado de tercer lugar latinoamerica - ACM ICPC - SOUTH</li>";
+  curriculum['2015'] = "<li>Gerente General - Dual Designers - 2015 +</li>";
+  var todo = curriculum['2010'] + curriculum['2011'] +  curriculum['2012'] + curriculum['2013'] + curriculum['2014'] + curriculum['2015'] + 
+
+  $(".btn").click(function(){
+     var id = this.id;
+     if (id!="todo")
+      $("#lista").html(curriculum[id]);
+    else
+      $("#lista").html(todo);
+});
+
+</script>
