@@ -41,6 +41,7 @@
     <button  id="curr" class="btnr" >Curriculum</button>
     <button  id="sbm" class="btnr" >Sobre mi</button>
     <button  id="mp" class="btnr" >Mi Pasion</button>
+    <button  id="mail" class="btnr" >Contacto</button>
   </div>
 
   <div id="primer_contenedor">
@@ -65,7 +66,6 @@
         <li>Capacitacion de Reparaciones Electricas Basicas - Infocal - 2010</li>
       </ul>
   </div>
-
   <div id="navegacion">
     <button id="2010" class="btn" >2010</button>
     <button id="2011" class="btn" >2011</button>
@@ -103,6 +103,15 @@
 
   var sobreMi = "Mi nombre es Sergio Koller. Estudio ingenieria de sistemas en la universidad catolica boliviana y actualmente me encuentro trabajando en la empresa de Diseno Grafico Dual Designers.";
   var miPasion = "La palabra pasion es algo muy complicado... realmente no seria capaz de decir cual es mi pasion porque por el momento encontre varias, pero ninguna definitiva. Para ser honesto tampoco soy muy fanatico del termino <quote>Pasion</quote> para referirse a lo que uno piensa hacer en la vida. La pasion no lleva al exito, el exito lleva a la pasion.";
+  var mail = "<form action='MAILTO:someone@example.com' method='post' enctype='text/plain'>"+
+      "Nombre:<br>"+
+      "<input type='text' name='name' placeholder='tu nombre'><br>"+
+      "E-mail:<br>"+
+      "<input type='text' name='mail' placeholder='tu email'><br>"+
+      "Mensaje:<br>"+
+      "<input type='text' name='comment' placeholder='tu mensaje' size='50'><br><br>"+
+      "<input type='submit' value='Enviar'>"+
+      "</form>";
   $(".btn").click(function(){
      var id = this.id;
      if (id!="todo")
@@ -130,6 +139,12 @@
       $("#titulo").html("Mi Pasion");
        $("#navegacion").hide();
        $("#lista").html(miPasion);
+    }
+    if(id=="mail")
+    {
+      $("#titulo").html("Enviar Mensajes");
+       $("#navegacion").hide();
+       $("#lista").html(mail);
     }
 });
 
